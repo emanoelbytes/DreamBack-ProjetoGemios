@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo Mágico — DreamBack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>DreamBack</h1>
+        <p class="sub-title">✨ Dê vida à sua imaginação! Crie fundos únicos e impressionantes com o poder da IA. Basta
+            descrever sua ideia e veja a magia ganhar forma diante dos seus olhos.</p>
+    </header>
+
+    <main class="main-content">
+        <section class="card card-main" aria-labelledby="bg-label">
+            <h2 id="bg-label" class="card-header">Descreva o background que você deseja</h2>
+
+            <form class="form-group" onsubmit="return false;">
+                <label for="Description" class="sr-only">Descrição do background</label>
+                <textarea id="Description" placeholder="Ex: um gradiente azul suave que vai de vinho para azul escuro"
+                    rows="5"></textarea>
+
+                <!-- botão type="button" para evitar reload do form -->
+                <button id="generate-bnt" class="bnt-magic" type="button">
+                    <span id="bnt-text">Gerar background mágico</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- área de preview (dinâmica) -->
+        <section id="preview-section" class="preview-card" aria-live="polite" aria-label="Preview do background">
+        </section>
+
+        <!-- container flex: coloque aqui os cards que devem ficar lado a lado -->
+        <section id="code-output" class="code-grid" aria-label="Códigos gerados">
+            <div class="card code-card">
+                <h3 class="code-title">Código HTML</h3>
+                <pre id="html-code" class="code-block"><code><!-- HTML gerado aparecerá aqui --></code></pre>
+            </div>
+
+            <div class="card code-card">
+                <h3 class="code-title">Código CSS</h3>
+                <pre id="css-code" class="code-block"><code><!-- CSS gerado aparecerá aqui --></code></pre>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
