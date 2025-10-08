@@ -1,57 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundo Mágico — DreamBack</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="src/css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="DreamBack - Gerador de backgrounds animados com IA. Crie fundos incríveis para seus projetos web apenas descrevendo sua ideia." />
+  <meta name="keywords" content="background, gerador, IA, CSS, HTML, animação, web design" />
+  <meta name="author" content="DreamBack" />
+  <meta name="theme-color" content="#0d0d0f" />
+  
+  <title>DreamBack - Gerador de Backgrounds com IA ✨</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="src/css/style.css" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DreamBack - Gerador de Backgrounds com IA" />
+  <meta property="og:description" content="Crie backgrounds animados incríveis com inteligência artificial" />
+  <meta property="og:image" content="https://seu-dominio.com/og-image.jpg" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="DreamBack - Gerador de Backgrounds com IA" />
+  <meta name="twitter:description" content="Crie backgrounds animados incríveis com inteligência artificial" />
 </head>
-
 <body>
-    <header class="header">
-        <h1>DreamBack</h1>
-        <p class="sub-title">✨ Dê vida à sua imaginação! Crie fundos únicos e impressionantes com o poder da IA. Basta
-            descrever sua ideia e veja a magia ganhar forma diante dos seus olhos.</p>
-    </header>
+  
+  <!-- ===== HEADER ===== -->
+  <header class="header" role="banner">
+    <h1>✨ DreamBack</h1>
+    <p class="sub-title">
+      Dê vida à sua imaginação! Descreva o background dos seus sonhos e deixe a IA criar para você.
+      <br>
+      <strong>Basta descrever sua ideia e veja a magia ganhar forma! 🎨</strong>
+    </p>
+  </header>
 
-    <main class="main-content">
-        <section class="card card-main" aria-labelledby="bg-label">
-            <h2 id="bg-label" class="card-header">Descreva o background que você deseja</h2>
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main class="main-content" role="main">
+    
+    <!-- Card: Gerador com IA -->
+    <section class="card card-main" aria-labelledby="generator-title">
+      <h2 id="generator-title" class="card-header">🤖 Gerador de Background com IA</h2>
 
-            <form class="form-group" onsubmit="return false;">
-                <label for="Description" class="sr-only">Descrição do background</label>
-                <textarea id="Description" placeholder="Ex: um gradiente azul suave que vai de vinho para azul escuro"
-                    rows="5"></textarea>
+      <div class="form-group">
+        <label for="Description" class="form-label">
+          Descreva o background que você deseja:
+        </label>
+        <textarea 
+          id="Description" 
+          name="description"
+          placeholder="Ex: Um pôr do sol nas montanhas com gradiente laranja e roxo, com animação suave de nuvens passando..."
+          rows="5"
+          aria-describedby="description-hint"
+          required
+        ></textarea>
+        <small id="description-hint" class="form-hint">
+          💡 Seja específico! Descreva cores, animações e efeitos desejados.
+        </small>
 
-                <!-- botão type="button" para evitar reload do form -->
-                <button id="generate-bnt" class="bnt-magic" type="button">
-                    <span id="bnt-text">Gerar background mágico</span>
-                </button>
-            </form>
-        </section>
+        <button id="generate-bnt" class="bnt-magic" type="button">
+          <span id="bnt-text">✨ Gerar Background Mágico</span>
+        </button>
+      </div>
+    </section>
 
-        <!-- área de preview (dinâmica) -->
-        <section id="preview-section" class="preview-card" aria-live="polite" aria-label="Preview do background">
-        </section>
+    <!-- Preview do Background Gerado -->
+    <section 
+      id="preview-section" 
+      class="preview-card card" 
+      aria-live="polite" 
+      aria-label="Preview do background gerado"
+      role="region"
+    >
+      <!-- Preview será inserido aqui dinamicamente -->
+    </section>
 
-        <!-- container flex: coloque aqui os cards que devem ficar lado a lado -->
-        <section id="code-output" class="code-grid" aria-label="Códigos gerados">
-            <div class="card code-card">
-                <h3 class="code-title">Código HTML</h3>
-                <pre id="html-code" class="code-block"><code><!-- HTML gerado aparecerá aqui --></code></pre>
-            </div>
+    <!-- Grid de Códigos HTML e CSS -->
+    <div class="code-grid" aria-label="Códigos HTML e CSS gerados">
+      
+      <!-- Card: HTML -->
+      <div class="card code-card">
+        <h3 class="code-title">📄 HTML</h3>
+        <pre 
+          id="html-code" 
+          class="code-block" 
+          tabindex="0"
+          role="textbox"
+          aria-label="Código HTML gerado"
+        ><code><!-- HTML gerado aparecerá aqui --></code></pre>
+        <small class="code-hint">👆 Clique para copiar</small>
+      </div>
 
-            <div class="card code-card">
-                <h3 class="code-title">Código CSS</h3>
-                <pre id="css-code" class="code-block"><code><!-- CSS gerado aparecerá aqui --></code></pre>
-            </div>
-        </section>
-    </main>
+      <!-- Card: CSS -->
+      <div class="card code-card">
+        <h3 class="code-title">🎨 CSS</h3>
+        <pre 
+          id="css-code" 
+          class="code-block" 
+          tabindex="0"
+          role="textbox"
+          aria-label="Código CSS gerado"
+        ><code>/* CSS gerado aparecerá aqui */</code></pre>
+        <small class="code-hint">👆 Clique para copiar</small>
+      </div>
+      
+    </div>
+
+    <!-- Galeria de Templates será inserida aqui via JavaScript -->
+    
+  </main>
+
+  <!-- ===== FOOTER (Opcional) ===== -->
+  <footer class="footer" role="contentinfo">
+    <p>
+      Feito com ❤️ por <strong>DreamBack</strong> | 
+      <a href="https://github.com/seu-usuario/dreamback" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </p>
+    <p class="footer-note">
+      Powered by emanoelbytes 🤖 | Todos os backgrounds são gerados em tempo real
+    </p>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="src/js/script.js" defer></script>
+  
+  <!-- Fallback caso JavaScript esteja desabilitado -->
+  <noscript>
+    <div class="noscript-warning">
+      <h2>⚠️ JavaScript Desabilitado</h2>
+      <p>
+        Para usar o DreamBack, você precisa habilitar o JavaScript no seu navegador.
+        Este aplicativo depende de JavaScript para funcionar corretamente.
+      </p>
+    </div>
+  </noscript>
+
 </body>
-
 </html>
