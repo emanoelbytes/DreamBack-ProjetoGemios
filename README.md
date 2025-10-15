@@ -10,7 +10,7 @@
 
 **Dê vida à sua imaginação! Crie backgrounds animados incríveis usando o poder da Inteligência Artificial.**
 
-[Demo ao Vivo](#) • [Documentação](#-funcionalidades) • [Reportar Bug](https://github.com/emanoelbytes/dreamback/issues) • [Solicitar Feature](https://github.com/emanoelbytes/dreamback/issues)
+ • [Documentação](#-funcionalidades) • [Reportar Bug](https://github.com/emanoelbytes/dreamback/issues) • [Solicitar Feature](https://github.com/emanoelbytes/dreamback/issues)
 
 </div>
 
@@ -436,7 +436,7 @@ in the Software without restriction...
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joão-emanoel-19898a366)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:emanoelbytes@gmail.com)
 
-**💼 Desenvolvedor Full Stack | 🤖 Entusiasta de IA | ✨ Criador do DreamBack**
+**💼 Estudante de Programação| 🤖 Entusiasta de IA | ✨ Criador do DreamBack**
 
 </div>
 
